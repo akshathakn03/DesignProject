@@ -1,0 +1,558 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/toolbarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/orange_900">
+
+        <ImageView
+            android:id="@+id/drawerbar"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:contentDescription="@string/nothing"
+            android:src="@drawable/menu" />
+
+        <TextView
+            android:id="@+id/pagetitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@id/drawerbar"
+            android:layout_toRightOf="@+id/drawerbar"
+            android:text="@string/home"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:id="@+id/scrollLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/toolbarLayout">
+
+        <RelativeLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/videoLayout"
+                android:layout_width="match_parent"
+                android:layout_height="260dp">
+
+                <ImageView
+                    android:id="@+id/pagerImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="260dp"
+                    android:contentDescription="@string/nothing"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/chainsmoker" />
+
+                <ImageView
+                    android:id="@+id/playimage"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="28dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginStart="32dp"
+                    android:contentDescription="@string/nothing"
+                    android:src="@drawable/play" />
+
+                <TextView
+                    android:id="@+id/videoaname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="48dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_toEndOf="@id/playimage"
+                    android:layout_toRightOf="@+id/playimage"
+                    android:contentDescription="@string/nothing"
+                    android:gravity="center"
+                    android:text="@string/chain_smoker_new_album_2016"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="28dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_toEndOf="@id/playimage"
+                    android:layout_toRightOf="@+id/playimage"
+                    android:text="@string/ft_rihana_and_user"
+                    android:textColor="@color/white"
+                    android:textStyle="normal" />
+
+                <LinearLayout
+                    android:id="@+id/dotlayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/dot1"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginRight="4dp"
+                        android:background="@drawable/whitecircle" />
+
+                    <TextView
+                        android:id="@+id/dot2"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginRight="4dp"
+                        android:background="@drawable/whitestroke" />
+
+                    <TextView
+                        android:id="@+id/dot3"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginRight="4dp"
+                        android:background="@drawable/whitestroke" />
+
+                    <TextView
+                        android:id="@+id/dot4"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginRight="4dp"
+                        android:background="@drawable/whitestroke" />
+
+                    <TextView
+                        android:id="@+id/dot5"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginRight="4dp"
+                        android:background="@drawable/whitestroke" />
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/videoLayout"
+                app:cardElevation="8dp"
+
+                >
+
+                <LinearLayout
+                    android:id="@+id/tabLayoutchild"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="16dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    tools:targetApi="lollipop">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="80dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center_vertical"
+                            android:drawableTop="@drawable/select_video"
+                            android:scaleX="0.5"
+                            android:scaleY="0.5"
+                            android:text="@string/videos"
+                            android:textAlignment="center"
+                            android:textAllCaps="true"
+                            android:textColor="@color/orange_900"
+                            android:textSize="16sp"
+                            android:textStyle="normal" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="4dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/orange_800" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/image"
+                        android:scaleX="0.5"
+                        android:scaleY="0.5"
+                        android:text="@string/image"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textColor="@color/grey_800"
+                        android:textSize="16sp"
+                        android:textStyle="normal" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/milestone"
+                        android:scaleX="0.5"
+                        android:scaleY="0.5"
+                        android:text="@string/milestone"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textColor="@color/grey_800"
+                        android:textSize="16sp"
+                        android:textStyle="normal" />
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tabLayout"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical">
+
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/childone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    app:cardUseCompatPadding="true">
+
+                    <RelativeLayout
+                        android:id="@+id/album1"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp">
+
+                        <ImageView
+                            android:id="@+id/albumone"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:contentDescription="@string/nothing"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/alubumfour" />
+
+                        <TextView
+                            android:id="@+id/albumsongname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_toEndOf="@+id/albumone"
+                            android:layout_toRightOf="@+id/albumone"
+                            android:text="@string/emptiness_ft_justin_tiblekar"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/albumsubtitle2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/albumsongname"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_toEndOf="@+id/albumone"
+                            android:layout_toRightOf="@id/albumone"
+                            android:drawableLeft="@drawable/clk"
+                            android:drawablePadding="4dp"
+                            android:drawableStart="@drawable/clk"
+                            android:gravity="center_horizontal"
+                            android:text="@string/_18_hours_ago"
+                            android:textAllCaps="true"
+                            android:textColor="@color/grey_800"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/albumdescription2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/albumsubtitle2"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_toEndOf="@id/albumone"
+                            android:layout_toRightOf="@+id/albumone"
+                            android:text="@string/lorem_ipsum_is_simply_dummy_text_of_the_printing_and_type_setting_industry"
+                            android:textColor="@color/grey_600" />
+
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/childone2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    app:cardUseCompatPadding="true">
+
+                    <RelativeLayout
+                        android:id="@+id/album12"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp">
+
+                        <ImageView
+                            android:id="@+id/albumone2"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@color/black"
+                            android:contentDescription="@string/nothing"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/alubumtwo" />
+
+                        <TextView
+                            android:id="@+id/albumsongname2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_toEndOf="@+id/albumone2"
+                            android:layout_toRightOf="@+id/albumone2"
+                            android:text="@string/im_falling_love_with_you"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/albumsubtitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/albumsongname2"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_toEndOf="@+id/albumone2"
+                            android:layout_toRightOf="@id/albumone2"
+                            android:drawableLeft="@drawable/clk"
+                            android:drawablePadding="4dp"
+                            android:drawableStart="@drawable/clk"
+                            android:gravity="center_horizontal"
+                            android:text="@string/_20_hours_ago"
+                            android:textAllCaps="true"
+                            android:textColor="@color/grey_800"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/albumdescription"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/albumsubtitle"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_toEndOf="@id/albumone2"
+                            android:layout_toRightOf="@+id/albumone2"
+                            android:text="@string/lorem_ipsum_is_simply_dummy_text_of_the_printing_and_type_setting_industry"
+                            android:textColor="@color/grey_600" />
+
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/childone3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    app:cardUseCompatPadding="true">
+
+                    <RelativeLayout
+                        android:id="@+id/album3"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp">
+
+                        <ImageView
+                            android:id="@+id/albumone3"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@color/black"
+                            android:contentDescription="@string/nothing"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/albumthree" />
+
+                        <TextView
+                            android:id="@+id/albumsongname3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_toEndOf="@+id/albumone3"
+                            android:layout_toRightOf="@+id/albumone3"
+                            android:text="@string/baby_ft_justing_baber"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/albumsubtitle3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/albumsongname3"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_toEndOf="@+id/albumone3"
+                            android:layout_toRightOf="@id/albumone3"
+                            android:drawableLeft="@drawable/clk"
+                            android:drawablePadding="4dp"
+                            android:drawableStart="@drawable/clk"
+                            android:gravity="center_horizontal"
+                            android:text="@string/_22_hours_ago"
+                            android:textAllCaps="true"
+                            android:textColor="@color/grey_800"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/albumdescription3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/albumsubtitle3"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_toEndOf="@id/albumone3"
+                            android:layout_toRightOf="@+id/albumone3"
+                            android:text="@string/lorem_ipsum_is_simply_dummy_text_of_the_printing_and_type_setting_industry"
+                            android:textColor="@color/grey_600" />
+
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/childone4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    app:cardUseCompatPadding="true">
+
+                    <RelativeLayout
+                        android:id="@+id/album4"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp">
+
+                        <ImageView
+                            android:id="@+id/albumone4"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="@color/black"
+                            android:contentDescription="@string/nothing"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/albumfour" />
+
+                        <TextView
+                            android:id="@+id/albumsongname4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_toEndOf="@+id/albumone4"
+                            android:layout_toRightOf="@+id/albumone4"
+                            android:text="@string/white_horse_ft_taylor_swift"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/albumsubtitle4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/albumsongname4"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_toEndOf="@+id/albumone4"
+                            android:layout_toRightOf="@id/albumone4"
+                            android:drawableLeft="@drawable/clk"
+                            android:drawablePadding="4dp"
+                            android:drawableStart="@drawable/clk"
+                            android:gravity="center_horizontal"
+                            android:text="@string/_23_hours_ago"
+                            android:textAllCaps="true"
+                            android:textColor="@color/grey_800"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/albumdescription4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/albumsubtitle4"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_toEndOf="@id/albumone4"
+                            android:layout_toRightOf="@+id/albumone4"
+                            android:text="@string/lorem_ipsum_is_simply_dummy_text_of_the_printing_and_type_setting_industry"
+                            android:textColor="@color/grey_600" />
+
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>
